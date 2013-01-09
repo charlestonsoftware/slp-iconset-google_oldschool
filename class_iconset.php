@@ -31,7 +31,7 @@ if ( ! class_exists( 'SLPIconSet_GoogleOldSchool' ) ) {
     class SLPIconSet_GoogleOldSchool {
         public  $plugin = null;
         function __construct() {
-            add_filter('slp_icon_directories'          ,array($this,'add_icon_directory')        ,10);
+            add_filter('slp_icon_directories'          ,array($this,'addIconDirectory')        ,10);
         }
 
         /**
