@@ -56,7 +56,15 @@ if ( ! class_exists( 'SLPIconSet_GoogleOldSchool' ) ) {
          * @param array $directories - array of directories.
          */
         function addIconDirectory($directories) {
-            $directories = array_merge($directories,array(plugin_dir_path(__FILE__)));
+            $directories = array_merge(
+                        $directories,
+                        array(
+                            array(
+                                'dir'=>plugin_dir_path(__FILE__),
+                                'url'=>plugins_url('',__FILE__).'/'
+                                )
+                        )
+                        );
             return $directories;
         }
     }
