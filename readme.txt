@@ -5,7 +5,7 @@ Donate link: http://www.charlestonsw.com/products/store-locator-plus-icon-set/
 Tags: search form, google maps
 Requires at least: 3.3
 Tested up to: 3.5
-Stable tag: 0.1
+Stable tag: 0.2
 
 A premium add-on pack for Store Locator Plus that adds more icons to the icon pickers.
 
@@ -53,6 +53,10 @@ We update about once per month or more frequently as needed.
 
 Visit the [CSA Website for details](http://www.charlestonsw.com/).
 
-= 0.1 (January 2013) =
+= 0.2 =
+
+* Tell SLP we are here.
+
+= 0.1 =
 
 * Initial release.

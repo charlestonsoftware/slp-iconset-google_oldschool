@@ -3,7 +3,7 @@
  * Plugin Name: Store Locator Plus : Icon Set Google Old School
  * Plugin URI: http://www.charlestonsw.com/products/store-locator-plus-icon-set/
  * Description: A premium add-on pack for Store Locator Plus that adds more icons to the icon pickers.
- * Version: 0.1
+ * Version: 0.2
  * Author: Charleston Software Associates
  * Author URI: http://charlestonsw.com/
  * Requires at least: 3.3
@@ -31,7 +31,18 @@ if ( ! class_exists( 'SLPIconSet_GoogleOldSchool' ) ) {
     class SLPIconSet_GoogleOldSchool {
         public  $plugin = null;
         function __construct() {
+            add_action('slp_init_complete'             ,array($this,'slp_init')                            );
             add_filter('slp_icon_directories'          ,array($this,'addIconDirectory')        ,10);
+        }
+
+        /**
+         * Do this after SLP initiliazes.
+         *
+         * @return null
+         */
+        function slp_init() {
+            if (!$this->setPlugin()) { return; }
+            $this->plugin->register_addon(plugin_basename(__FILE__));
         }
 
         /**
